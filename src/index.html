@@ -4,9 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Planificador de Tareas</title>
 </head>
+
 <body>
+     <h1>Planificador de tareas</h1>
+
+  <form id="formTarea">
+    <div>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" placeholder="Ej: Entregar informe">
+    </div>
+
+    <div>
+      <label for="descripcion">Descripción</label>
+      <textarea id="descripcion" rows="1" placeholder="¿Qué hay que hacer?"></textarea>
+    </div>
+
+    <div>
+      <label for="asignado">Asignado</label>
+      <input type="text" id="asignado" placeholder="Ej: Dayana Vallejo">
+    </div>
+
+    <div>
+      <label for="fechaEntrega">Fecha de entrega</label>
+      <input type="date" id="fechaEntrega">
+    </div>
+
+    <div>
+      <label for="estado">Estado</label>
+      <select id="estado">
+        <option value="Pendiente">Pendiente</option>
+        <option value="En progreso">En progreso</option>
+        <option value="Completada">Completada</option>
+      </select>
+    </div>
+
+    <button type="button" id="btnGuardar">Guardar tarea</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Asignado</th>
+        <th>Fecha de entrega</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody id="listaTareas">
+    </tbody>
+  </table>
+
+</body>
+</html>
     <script src="script.js"></script>
 </body>
 </html>
